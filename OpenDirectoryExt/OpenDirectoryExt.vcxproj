@@ -6,7 +6,7 @@
     <CppWinRTRootNamespaceAutoMerge>true</CppWinRTRootNamespaceAutoMerge>
     <CppWinRTGenerateWindowsMetadata>true</CppWinRTGenerateWindowsMetadata>
     <MinimalCoreWin>true</MinimalCoreWin>
-    <ProjectGuid>{db5f5aa6-13b4-458a-a6a9-e29238adae06}</ProjectGuid>
+    <ProjectGuid>{594B5EAB-CD1D-4D77-8638-5DF9879505BA}</ProjectGuid>
     <ProjectName>OpenDirectoryExt</ProjectName>
     <RootNamespace>OpenDirectoryExt</RootNamespace>
     <DefaultLanguage>en-US</DefaultLanguage>
@@ -18,8 +18,29 @@
     <WindowsTargetPlatformMinVersion>10.0.19041.0</WindowsTargetPlatformMinVersion>
   </PropertyGroup>
   <PropertyGroup>
-    <OutDir>$(SolutionDir)$(ProjectName)\$(Platform)\$(Configuration)\bin\</OutDir>
-    <IntDir>$(SolutionDir)$(ProjectName)\$(Platform)\$(Configuration)\obj\</IntDir>
+    <OutDir>..\build</OutDir>
+    <IntDir>
+    </IntDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|ARM64'">
+    <TargetName>
+    </TargetName>
+    <TargetExt>.dll</TargetExt>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|ARM64'">
+    <TargetName>
+    </TargetName>
+    <TargetExt>.dll</TargetExt>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <TargetName>
+    </TargetName>
+    <TargetExt>.dll</TargetExt>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <TargetName>
+    </TargetName>
+    <TargetExt>.dll</TargetExt>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <ItemGroup Label="ProjectConfigurations">

@@ -4,6 +4,7 @@ using System;
 using System.Collections.Concurrent;
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
 using Windows.ApplicationModel;
@@ -31,6 +32,11 @@ namespace RX_Explorer.Class
                 }
                 else
                 {
+                    //if (Debugger.IsAttached)
+                    //{
+                    //    string monitorTrustProcess = Path.Combine(Path.GetDirectoryName(Package.Current.InstalledLocation.Path), "MonitorTrustProcess\\MonitorTrustProcess.exe");
+                    //    await FullTrustProcessLauncher.LaunchFullTrustProcessForCurrentAppAsync(monitorTrustProcess);
+                    //}
                     await FullTrustProcessLauncher.LaunchFullTrustProcessForCurrentAppAsync("MonitorTrustProcess");
                 }
 

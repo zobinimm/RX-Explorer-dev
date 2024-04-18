@@ -4,32 +4,74 @@
   <PropertyGroup>
     <LangVersion>latest</LangVersion>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
-    <Platform>x64</Platform>
-    <ProjectGuid>{02D26683-3BD6-4B30-8457-62CD714B0ADF}</ProjectGuid>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProjectGuid>{3B123CF9-6A0F-4B5D-BAA2-2A3CCAED6946}</ProjectGuid>
     <OutputType>AppContainerExe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>RX_Explorer</RootNamespace>
     <AssemblyName>RX_Explorer</AssemblyName>
-    <DefaultLanguage>en-US</DefaultLanguage>
+    <DefaultLanguage>ja-JP</DefaultLanguage>
     <AppxBundleAutoResourcePackageQualifiers>Scale|DXFeatureLevel</AppxBundleAutoResourcePackageQualifiers>
     <AppxDefaultResourceQualifiers>Language=en-US;fr-FR;zh-Hans;zh-Hant;es;de-DE</AppxDefaultResourceQualifiers>
     <TargetPlatformIdentifier>UAP</TargetPlatformIdentifier>
     <TargetPlatformVersion Condition=" '$(TargetPlatformVersion)' == '' ">10.0.22621.0</TargetPlatformVersion>
     <TargetPlatformMinVersion>10.0.19041.0</TargetPlatformMinVersion>
-    <MinimumVisualStudioVersion>16</MinimumVisualStudioVersion>
+    <MinimumVisualStudioVersion>14</MinimumVisualStudioVersion>
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{A5A43C5B-DE2A-4C0C-9213-0A381AF9435A};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <WindowsXamlEnableOverview>true</WindowsXamlEnableOverview>
-    <Use64BitCompiler>true</Use64BitCompiler>
-    <PropertyChangedAnalyzerConfiguration>
-      <IsCodeGeneratorDisabled>false</IsCodeGeneratorDisabled>
-      <EventInvokerName>OnPropertyChanged</EventInvokerName>
-    </PropertyChangedAnalyzerConfiguration>
+    <AppxPackageSigningEnabled>false</AppxPackageSigningEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE;NETFX_CORE;WINDOWS_UWP</DefineConstants>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <DefineConstants>TRACE;NETFX_CORE;WINDOWS_UWP</DefineConstants>
+    <Optimize>true</Optimize>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+    <UseDotNetNativeToolchain>true</UseDotNetNativeToolchain>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|ARM'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\ARM\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE;NETFX_CORE;WINDOWS_UWP</DefineConstants>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>full</DebugType>
+    <PlatformTarget>ARM</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|ARM'">
+    <OutputPath>bin\ARM\Release\</OutputPath>
+    <DefineConstants>TRACE;NETFX_CORE;WINDOWS_UWP</DefineConstants>
+    <Optimize>true</Optimize>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>ARM</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+    <UseDotNetNativeToolchain>true</UseDotNetNativeToolchain>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|ARM64'">
     <DebugSymbols>true</DebugSymbols>
     <OutputPath>bin\ARM64\Debug\</OutputPath>
-    <DefineConstants>TRACE;DEBUG;NETFX_CORE;WINDOWS_UWP;CODE_ANALYSIS;DISABLE_XAML_GENERATED_MAIN</DefineConstants>
+    <DefineConstants>DEBUG;TRACE;NETFX_CORE;WINDOWS_UWP</DefineConstants>
     <NoWarn>;2008</NoWarn>
     <DebugType>full</DebugType>
     <PlatformTarget>ARM64</PlatformTarget>
@@ -41,7 +83,7 @@
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|ARM64'">
     <OutputPath>bin\ARM64\Release\</OutputPath>
-    <DefineConstants>TRACE;NETFX_CORE;WINDOWS_UWP;DISABLE_XAML_GENERATED_MAIN;CODE_ANALYSIS</DefineConstants>
+    <DefineConstants>TRACE;DISABLE_XAML_GENERATED_MAIN;NETFX_CORE;WINDOWS_UWP</DefineConstants>
     <Optimize>true</Optimize>
     <NoWarn>;2008</NoWarn>
     <DebugType>pdbonly</DebugType>
@@ -57,8 +99,8 @@
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
     <DebugSymbols>true</DebugSymbols>
-    <OutputPath>bin\x64\Debug\</OutputPath>
-    <DefineConstants>TRACE;DEBUG;NETFX_CORE;WINDOWS_UWP;DISABLE_XAML_GENERATED_MAIN;CODE_ANALYSIS;</DefineConstants>
+    <OutputPath>..\Build\</OutputPath>
+    <DefineConstants>TRACE;DEBUG;NETFX_CORE;DISABLE_XAML_GENERATED_MAIN;WINDOWS_UWP;CODE_ANALYSIS</DefineConstants>
     <NoWarn>;2008</NoWarn>
     <DebugType>full</DebugType>
     <PlatformTarget>x64</PlatformTarget>
@@ -68,8 +110,8 @@
     <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
-    <OutputPath>bin\x64\Release\</OutputPath>
-    <DefineConstants>TRACE;NETFX_CORE;WINDOWS_UWP;DISABLE_XAML_GENERATED_MAIN;CODE_ANALYSIS;</DefineConstants>
+    <OutputPath>..\build\</OutputPath>
+    <DefineConstants>TRACE;NETFX_CORE;DISABLE_XAML_GENERATED_MAIN;WINDOWS_UWP;CODE_ANALYSIS</DefineConstants>
     <Optimize>true</Optimize>
     <NoWarn>;2008</NoWarn>
     <DebugType>pdbonly</DebugType>
@@ -893,31 +935,31 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\AnimationEffectProvider\AnimationEffectProvider.csproj">
-      <Project>{3b40a94d-6173-4b62-971e-27abdbece9d6}</Project>
+      <Project>{351846d6-2a0d-4141-b772-d6220f994a13}</Project>
       <Name>AnimationEffectProvider</Name>
     </ProjectReference>
     <ProjectReference Include="..\ComputerVision\ComputerVision.csproj">
-      <Project>{5bc5b5aa-53f4-4437-95b3-261f790ae373}</Project>
+      <Project>{d028de76-655b-47bc-9b59-10fc5710fbfc}</Project>
       <Name>ComputerVision</Name>
     </ProjectReference>
     <ProjectReference Include="..\MaintenanceTask\MaintenanceTask.csproj">
-      <Project>{62f0700f-394a-43de-92fd-fcfe063069d3}</Project>
+      <Project>{a4bf6cd2-7df0-47ac-bd07-3f277c75109c}</Project>
       <Name>MaintenanceTask</Name>
     </ProjectReference>
     <ProjectReference Include="..\OpenDirectoryExt\OpenDirectoryExt.vcxproj">
-      <Project>{db5f5aa6-13b4-458a-a6a9-e29238adae06}</Project>
+      <Project>{594b5eab-cd1d-4d77-8638-5df9879505ba}</Project>
       <Name>OpenDirectoryExt</Name>
     </ProjectReference>
     <ProjectReference Include="..\SharedLibrary\SharedLibrary.csproj">
-      <Project>{57848d87-5f61-4150-b6dc-56a87ac0aeae}</Project>
+      <Project>{35f433b9-9c80-4ca4-9731-cf7f683ed777}</Project>
       <Name>SharedLibrary</Name>
     </ProjectReference>
     <ProjectReference Include="..\SystemInformationProvider\SystemInformationProvider.vcxproj">
-      <Project>{7180af0d-b012-46b7-a18f-9a0f10a2bb76}</Project>
+      <Project>{933ebde5-396b-4435-b937-77ddb29d5d75}</Project>
       <Name>SystemInformationProvider</Name>
     </ProjectReference>
     <ProjectReference Include="..\UpdateCheckBackgroundTask\UpdateCheckBackgroundTask.csproj">
-      <Project>{f6d7bf7b-aa4f-4f20-a6fe-45c60c75f88a}</Project>
+      <Project>{018ca960-3ea0-4737-9b99-0b2e3f8fd079}</Project>
       <Name>UpdateCheckBackgroundTask</Name>
     </ProjectReference>
   </ItemGroup>

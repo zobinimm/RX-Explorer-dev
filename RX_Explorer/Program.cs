@@ -55,7 +55,7 @@ namespace RX_Explorer
             {
                 if (SettingPage.IsAlwaysLaunchNewProcessEnabled || string.IsNullOrWhiteSpace(AppInstanceIdContainer.LastActiveId))
                 {
-                    AppInstanceIdContainer.RegisterId(AppInstance.FindOrRegisterInstanceForKey(Guid.NewGuid().ToString()).Key);
+                    //AppInstanceIdContainer.RegisterId(AppInstance.FindOrRegisterInstanceForKey(Guid.NewGuid().ToString()).Key);
                     Application.Start((_) => new App());
                 }
                 else

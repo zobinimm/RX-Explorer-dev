@@ -1,34 +1,18 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
+
 	<PropertyGroup>
-		<TargetFramework>net8.0-windows</TargetFramework>
 		<OutputType>WinExe</OutputType>
 		<LangVersion>latest</LangVersion>
-		<Platforms>x64;ARM64</Platforms>
-		<RuntimeIdentifiers>win-x64;win-arm64</RuntimeIdentifiers>
-		<GenerateAssemblyInfo>false</GenerateAssemblyInfo>
-	</PropertyGroup>
-	<PropertyGroup Condition="'$(Configuration)' == 'Release'">
-		<TieredPGO>true</TieredPGO>
-		<SelfContained>true</SelfContained>
-		<TieredCompilation>true</TieredCompilation>
-		<PublishSingleFile>true</PublishSingleFile>
-		<PublishReadyToRun>true</PublishReadyToRun>
-	</PropertyGroup>
-	<PropertyGroup Condition="'$(Platform)' == 'x64'">
-		<RuntimeIdentifier>win-x64</RuntimeIdentifier>
-	</PropertyGroup>
-	<PropertyGroup Condition="'$(Platform)' == 'ARM64'">
-		<RuntimeIdentifier>win-arm64</RuntimeIdentifier>
-	</PropertyGroup>
-	<PropertyGroup>
-		<StartupObject />
-	</PropertyGroup>
-	<PropertyGroup>
-		<RunPostBuildEvent>OnBuildSuccess</RunPostBuildEvent>
+		<TargetFramework>net8.0-windows7.0</TargetFramework>
+		<Nullable>disable</Nullable>
+		<UseWindowsForms>False</UseWindowsForms>
+		<ImplicitUsings>enable</ImplicitUsings>
+		<OutputPath>..\build\$(MSBuildProjectName)</OutputPath>
+		<AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
 	</PropertyGroup>
 	<ItemGroup>
-	  <None Remove="Ssl\RX-Explorer Certificate Authority Root.cer" />
-	  <None Remove="Ssl\RX-Explorer Client Certificate.pfx" />
+		<None Remove="Ssl\RX-Explorer Certificate Authority Root.cer" />
+		<None Remove="Ssl\RX-Explorer Client Certificate.pfx" />
 	</ItemGroup>
 	<ItemGroup>
 		<None Include="..\.editorconfig">
@@ -38,16 +22,17 @@
 			<CopyToOutputDirectory>Always</CopyToOutputDirectory>
 		</Content>
 		<Content Include="Ssl\RX-Explorer Certificate Authority Root.cer">
-		  <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+			<CopyToOutputDirectory>Always</CopyToOutputDirectory>
 		</Content>
 		<Content Include="Ssl\RX-Explorer Client Certificate.pfx">
-		  <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+			<CopyToOutputDirectory>Always</CopyToOutputDirectory>
 		</Content>
 	</ItemGroup>
 	<ItemGroup>
 		<PackageReference Include="CommandLineParser" Version="2.9.1" />
 		<PackageReference Include="MediaDevices" Version="1.10.0" />
 		<PackageReference Include="MimeTypeMapOfficial" Version="1.0.17" />
+		<PackageReference Include="System.Text.Json" Version="8.0.3" />
 		<PackageReference Include="UACHelper" Version="1.3.0.5" />
 		<PackageReference Include="UsbEject.NetCore" Version="1.0.4" />
 		<PackageReference Include="UTF.Unknown" Version="2.5.1" />
@@ -75,4 +60,5 @@
 	<ItemGroup>
 		<ProjectReference Include="..\SharedLibrary\SharedLibrary.csproj" />
 	</ItemGroup>
+
 </Project>

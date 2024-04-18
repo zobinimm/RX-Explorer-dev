@@ -257,6 +257,11 @@ namespace RX_Explorer.Class
                 }
                 else
                 {
+                    //if (Debugger.IsAttached)
+                    //{
+                    //    string auxiliaryTrustProcess = Path.Combine(Path.GetDirectoryName(Package.Current.InstalledLocation.Path), "AuxiliaryTrustProcess\\AuxiliaryTrustProcess.exe");
+                    //    await FullTrustProcessLauncher.LaunchFullTrustProcessForCurrentAppAsync(auxiliaryTrustProcess);
+                    //}
                     await FullTrustProcessLauncher.LaunchFullTrustProcessForCurrentAppAsync("AuxiliaryTrustProcess");
                 }
 

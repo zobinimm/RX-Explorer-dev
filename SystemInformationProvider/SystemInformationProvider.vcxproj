@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup Label="Globals">
-    <ProjectGuid>{7180af0d-b012-46b7-a18f-9a0f10a2bb76}</ProjectGuid>
+    <ProjectGuid>{933EBDE5-396B-4435-B937-77DDB29D5D75}</ProjectGuid>
     <Keyword>WindowsRuntimeComponent</Keyword>
     <RootNamespace>SystemInformationProvider</RootNamespace>
     <DefaultLanguage>en-US</DefaultLanguage>
@@ -12,34 +12,31 @@
     <WindowsTargetPlatformMinVersion>10.0.19041.0</WindowsTargetPlatformMinVersion>
     <ApplicationTypeRevision>10.0</ApplicationTypeRevision>
   </PropertyGroup>
-  <PropertyGroup>
-    <OutDir>$(SolutionDir)$(ProjectName)\$(Platform)\$(Configuration)\bin\</OutDir>
-    <IntDir>$(SolutionDir)$(ProjectName)\$(Platform)\$(Configuration)\obj\</IntDir>
-  </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <ItemGroup Label="ProjectConfigurations">
-	  <ProjectConfiguration Include="Debug|ARM64">
-	    <Configuration>Debug</Configuration>
-	    <Platform>ARM64</Platform>
-	  </ProjectConfiguration>
-	  <ProjectConfiguration Include="Debug|x64">
-	    <Configuration>Debug</Configuration>
-	    <Platform>x64</Platform>
-	  </ProjectConfiguration>
-	  <ProjectConfiguration Include="Release|ARM64">
-	    <Configuration>Release</Configuration>
-	    <Platform>ARM64</Platform>
-  	</ProjectConfiguration>
-	  <ProjectConfiguration Include="Release|x64">
-	    <Configuration>Release</Configuration>
-	    <Platform>x64</Platform>
-	  </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|ARM64">
+      <Configuration>Debug</Configuration>
+      <Platform>ARM64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|ARM64">
+      <Configuration>Release</Configuration>
+      <Platform>ARM64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
   </ItemGroup>
   <PropertyGroup Label="Configuration">
     <PlatformToolset>v143</PlatformToolset>
     <GenerateManifest>false</GenerateManifest>
-    <OutDir>$(SolutionDir)$(ProjectName)\$(Platform)\$(Configuration)\bin\</OutDir>
-    <IntDir>$(SolutionDir)$(ProjectName)\$(Platform)\$(Configuration)\obj\</IntDir>
+    <OutDir>..\build</OutDir>
+    <IntDir>
+    </IntDir>
     <ConfigurationType>DynamicLibrary</ConfigurationType>
     <LinkIncremental Condition="'$(Configuration)'=='Debug'">true</LinkIncremental>
     <LinkIncremental Condition="'$(Configuration)'=='Release'">false</LinkIncremental>
@@ -49,24 +46,44 @@
     <WholeProgramOptimization Condition="'$(Configuration)'=='Release'">true</WholeProgramOptimization>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
-  <ImportGroup Label="ExtensionSettings"/>
-  <ImportGroup Label="Shared"/>
+  <ImportGroup Label="ExtensionSettings" />
+  <ImportGroup Label="Shared" />
   <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
   <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|ARM64'">
+    <GenerateManifest>false</GenerateManifest>
+    <IgnoreImportLibrary>false</IgnoreImportLibrary>
+    <OutDir>..\build</OutDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|ARM64'">
+    <GenerateManifest>false</GenerateManifest>
+    <IgnoreImportLibrary>false</IgnoreImportLibrary>
+    <OutDir>..\build</OutDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <GenerateManifest>false</GenerateManifest>
+    <IgnoreImportLibrary>false</IgnoreImportLibrary>
+    <OutDir>..\build</OutDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <GenerateManifest>false</GenerateManifest>
+    <IgnoreImportLibrary>false</IgnoreImportLibrary>
+    <OutDir>..\build</OutDir>
+  </PropertyGroup>
   <ItemDefinitionGroup>
-	<ClCompile>
-	  <PrecompiledHeader>Use</PrecompiledHeader>
-	  <PreprocessorDefinitions>_WINRT_DLL;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-	  <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
-	  <PrecompiledHeaderOutputFile>$(IntDir)pch.pch</PrecompiledHeaderOutputFile>
-	  <AdditionalUsingDirectories>$(WindowsSDK_WindowsMetadata);$(AdditionalUsingDirectories)</AdditionalUsingDirectories>
-	  <AdditionalOptions>/bigobj %(AdditionalOptions)</AdditionalOptions>
-	  <DisableSpecificWarnings>28204</DisableSpecificWarnings>
-	</ClCompile>
-	<Link>
-	  <SubSystem>Console</SubSystem>
-	  <IgnoreAllDefaultLibraries>false</IgnoreAllDefaultLibraries>
-	</Link>
+    <ClCompile>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PreprocessorDefinitions>_WINRT_DLL;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+      <PrecompiledHeaderOutputFile>$(IntDir)pch.pch</PrecompiledHeaderOutputFile>
+      <AdditionalUsingDirectories>$(WindowsSDK_WindowsMetadata);$(AdditionalUsingDirectories)</AdditionalUsingDirectories>
+      <AdditionalOptions>/bigobj %(AdditionalOptions)</AdditionalOptions>
+      <DisableSpecificWarnings>28204</DisableSpecificWarnings>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <IgnoreAllDefaultLibraries>false</IgnoreAllDefaultLibraries>
+    </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClInclude Include="InstructionSet.h" />
@@ -80,5 +97,5 @@
     <ClCompile Include="SystemInformation.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
-  <ImportGroup Label="ExtensionTargets"/>
+  <ImportGroup Label="ExtensionTargets" />
 </Project>
