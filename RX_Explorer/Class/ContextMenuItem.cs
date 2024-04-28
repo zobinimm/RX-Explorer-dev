@@ -23,6 +23,8 @@ namespace RX_Explorer.Class
 
         public string[] RelatedPath => DataPackage.RelatedPath;
 
+        public MenuItemType MenuType => DataPackage.MenuType;
+
         private ContextMenuItem[] subMenu;
 
         public ContextMenuItem[] SubMenus => subMenu ??= DataPackage.SubMenus.Select((Menu) => new ContextMenuItem(Menu)).ToArray();
@@ -38,8 +40,14 @@ namespace RX_Explorer.Class
         {
             List<MenuFlyoutItemBase> MenuItems = new List<MenuFlyoutItemBase>(SubMenus.Length);
 
-            foreach (ContextMenuItem SubItem in SubMenus.OrderByFastStringSortAlgorithm((Item) => Item.Name, SortDirection.Ascending))
+            foreach (ContextMenuItem SubItem in SubMenus)
             {
+                if(SubItem.MenuType == MenuItemType.MFT_SEPARATOR)
+                {
+                    MenuItems.Add(new MenuFlyoutSeparator());
+                    continue;
+                }       
+
                 if (SubItem.SubMenus.Length > 0)
                 {
                     MenuFlyoutSubItem Item = new MenuFlyoutSubItem

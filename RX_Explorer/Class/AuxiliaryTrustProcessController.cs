@@ -1430,7 +1430,7 @@ namespace RX_Explorer.Class
 
                 if (Response.TryGetValue("Success", out string Result))
                 {
-                    return JsonConvert.DeserializeObject<ContextMenuPackage[]>(Result).OrderByFastStringSortAlgorithm((Item) => Item.Name, SortDirection.Ascending).Select((Item) => new ContextMenuItem(Item)).ToArray();
+                    return JsonConvert.DeserializeObject<ContextMenuPackage[]>(Result).Select((Item) => new ContextMenuItem(Item)).ToArray();
                 }
                 else if (Response.TryGetValue("Error", out string ErrorMessage))
                 {

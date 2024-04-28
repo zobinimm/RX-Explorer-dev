@@ -290,6 +290,18 @@ namespace AuxiliaryTrustProcess.Class
                                     }
                                 }
 
+                            } else if (Info.fType == User32.MenuItemType.MFT_SEPARATOR) {
+                                if (MenuItems.LastOrDefault()?.MenuType == MenuItemType.MFT_SEPARATOR)
+                                    continue;
+
+                                ContextMenuPackage Package = new ContextMenuPackage
+                                {
+                                    Name = string.Empty,
+                                    Id = 0,
+                                    MenuType = MenuItemType.MFT_SEPARATOR
+                                };
+                                MenuItems.Add(Package);
+
                             }
                         }
                     }

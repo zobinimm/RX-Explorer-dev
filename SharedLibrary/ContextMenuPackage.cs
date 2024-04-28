@@ -16,6 +16,8 @@ namespace SharedLibrary
 
         public string[] RelatedPath { get; set; }
 
+        public MenuItemType MenuType { get; set; }
+
         public ContextMenuPackage[] SubMenus { get; set; }
 
         public object Clone()
