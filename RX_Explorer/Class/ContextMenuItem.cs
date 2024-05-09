@@ -57,6 +57,7 @@ namespace RX_Explorer.Class
                         MinWidth = 150,
                         MaxWidth = 300,
                         FontFamily = Application.Current.Resources["ContentControlThemeFontFamily"] as FontFamily,
+                        FontSize = 12
                     };
 
                     ToolTipService.SetToolTip(Item, SubItem.Name);
@@ -89,6 +90,7 @@ namespace RX_Explorer.Class
                         MinWidth = 150,
                         MaxWidth = 300,
                         FontFamily = Application.Current.Resources["ContentControlThemeFontFamily"] as FontFamily,
+                        FontSize = 12
                     };
                     FlyoutItem.Click += ClickHandler;
 
@@ -124,6 +126,7 @@ namespace RX_Explorer.Class
                 Tag = this,
                 Width = 320,
                 FontFamily = Application.Current.Resources["ContentControlThemeFontFamily"] as FontFamily,
+                FontSize = 13,
                 Name = "ExtraButton"
             };
             Button.Click += ClickHandler;

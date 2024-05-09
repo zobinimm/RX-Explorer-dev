@@ -213,6 +213,7 @@ namespace RX_Explorer.View
             {
                 Icon = new SymbolIcon { Symbol = Symbol.OpenFile },
                 Label = Globalization.GetString("Operate_Text_Open"),
+                FontSize = 13,
                 Width = 320
             };
             OpenButton.KeyboardAccelerators.Add(new KeyboardAccelerator
@@ -230,6 +231,7 @@ namespace RX_Explorer.View
             {
                 Label = Globalization.GetString("Operate_Text_NewTab"),
                 Width = 320,
+                FontSize = 13,
                 Icon = new FontIcon
                 {
                     FontFamily = FontIconFamily,
@@ -253,6 +255,7 @@ namespace RX_Explorer.View
                 Name = "OpenFolderInNewWindowButton",
                 Label = Globalization.GetString("Operate_Text_NewWindow"),
                 Width = 320,
+                FontSize = 13,
                 Icon = new FontIcon
                 {
                     FontFamily = FontIconFamily,
@@ -275,6 +278,7 @@ namespace RX_Explorer.View
             {
                 Label = Globalization.GetString("Operate_Text_SplitView"),
                 Width = 320,
+                FontSize = 13,
                 Name = "OpenFolderInVerticalSplitView",
                 Visibility = Visibility.Collapsed,
                 Icon = new FontIcon
@@ -302,6 +306,7 @@ namespace RX_Explorer.View
                 Icon = new SymbolIcon { Symbol = Symbol.Send },
                 Label = Globalization.GetString("SendTo/Label"),
                 Name = "FolderSendToButton",
+                FontSize = 13,
                 Width = 320
             };
 
@@ -318,6 +323,7 @@ namespace RX_Explorer.View
             {
                 Icon = new SymbolIcon { Symbol = Symbol.Tag },
                 Width = 320,
+                FontSize = 13,
                 Label = Globalization.GetString("Operate_Text_Property")
             };
             PropertyButton.KeyboardAccelerators.Add(new KeyboardAccelerator

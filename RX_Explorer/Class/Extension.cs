@@ -666,6 +666,7 @@ namespace RX_Explorer.Class
                                                 MinWidth = 150,
                                                 MaxWidth = 300,
                                                 FontFamily = Application.Current.Resources["ContentControlThemeFontFamily"] as FontFamily,
+                                                FontSize = 13
                                             };
                                             MenuItem.Click += ClickHandler;
 
@@ -688,6 +689,7 @@ namespace RX_Explorer.Class
                                                 MinWidth = 150,
                                                 MaxWidth = 300,
                                                 FontFamily = Application.Current.Resources["ContentControlThemeFontFamily"] as FontFamily,
+                                                FontSize = 13
                                             };
                                             MenuItem.Click += ClickHandler;
 
@@ -717,6 +719,7 @@ namespace RX_Explorer.Class
                                         MinWidth = 150,
                                         MaxWidth = 300,
                                         FontFamily = Application.Current.Resources["ContentControlThemeFontFamily"] as FontFamily,
+                                        FontSize = 13
                                     };
                                     MenuItem.Click += ClickHandler;
 
@@ -750,6 +753,7 @@ namespace RX_Explorer.Class
                                             MinWidth = 150,
                                             MaxWidth = 300,
                                             FontFamily = Application.Current.Resources["ContentControlThemeFontFamily"] as FontFamily,
+                                            FontSize = 13
                                         };
                                         MenuItem.Click += ClickHandler;
 
@@ -784,7 +788,8 @@ namespace RX_Explorer.Class
                                     MinWidth = 150,
                                     MaxWidth = 300,
                                     Icon = new FontIcon { Glyph = "\uE7BA" },
-                                    FontFamily = Application.Current.Resources["ContentControlThemeFontFamily"] as FontFamily
+                                    FontFamily = Application.Current.Resources["ContentControlThemeFontFamily"] as FontFamily,
+                                    FontSize = 13
                                 });
                             }
                         }
@@ -845,6 +850,7 @@ namespace RX_Explorer.Class
                                             Icon = new SymbolIcon(Symbol.More),
                                             Name = "ExtraButton",
                                             FontFamily = Application.Current.Resources["ContentControlThemeFontFamily"] as FontFamily,
+                                            FontSize = 13,
                                             Width = 320,
                                             Flyout = MoreFlyout
                                         });

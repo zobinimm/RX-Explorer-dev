@@ -350,6 +350,7 @@ namespace RX_Explorer.View
             AppBarButton RemoveLabelButton = new AppBarButton
             {
                 Tag = LabelKind.None,
+                FontSize = 13,
                 Icon = new FontIcon
                 {
                     FontFamily = FontIconFamily,
@@ -364,6 +365,7 @@ namespace RX_Explorer.View
                 Name = "PredefineTag1Button",
                 Tag = LabelKind.PredefineLabel1,
                 Foreground = new SolidColorBrush(SettingPage.PredefineLabelForeground1),
+                FontSize = 13,
                 Icon = new FontIcon
                 {
                     FontFamily = FontIconFamily,
@@ -378,6 +380,7 @@ namespace RX_Explorer.View
                 Name = "PredefineTag2Button",
                 Tag = LabelKind.PredefineLabel2,
                 Foreground = new SolidColorBrush(SettingPage.PredefineLabelForeground2),
+                FontSize = 13,
                 Icon = new FontIcon
                 {
                     FontFamily = FontIconFamily,
@@ -392,6 +395,7 @@ namespace RX_Explorer.View
                 Name = "PredefineTag3Button",
                 Tag = LabelKind.PredefineLabel3,
                 Foreground = new SolidColorBrush(SettingPage.PredefineLabelForeground3),
+                FontSize = 13,
                 Icon = new FontIcon
                 {
                     FontFamily = FontIconFamily,
@@ -406,6 +410,7 @@ namespace RX_Explorer.View
                 Name = "PredefineTag4Button",
                 Tag = LabelKind.PredefineLabel4,
                 Foreground = new SolidColorBrush(SettingPage.PredefineLabelForeground4),
+                FontSize = 13,
                 Icon = new FontIcon
                 {
                     FontFamily = FontIconFamily,
@@ -459,6 +464,7 @@ namespace RX_Explorer.View
             {
                 Icon = new SymbolIcon { Symbol = Symbol.OpenFile },
                 Label = Globalization.GetString("Operate_Text_Open"),
+                FontSize = 13,
                 Width = 320
             };
             OpenButton.KeyboardAccelerators.Add(new KeyboardAccelerator
@@ -476,6 +482,7 @@ namespace RX_Explorer.View
             {
                 Icon = new SymbolIcon { Symbol = Symbol.OpenWith },
                 Label = Globalization.GetString("Operate_Text_OpenWith"),
+                FontSize = 13,
                 Name = "OpenWithButton",
                 Width = 320
             };
@@ -485,6 +492,7 @@ namespace RX_Explorer.View
                 Text = Globalization.GetString("Operate_Text_OpenAsAdministrator"),
                 MinWidth = 160,
                 Name = "RunAsAdminButton",
+                FontSize = 13,
                 Icon = new FontIcon
                 {
                     FontFamily = FontIconFamily,
@@ -521,6 +529,7 @@ namespace RX_Explorer.View
             {
                 Icon = new SymbolIcon { Symbol = Symbol.Edit },
                 Label = Globalization.GetString("Operate_Text_Edit"),
+                FontSize = 13,
                 Name = "EditButton",
                 Width = 320
             };
@@ -528,6 +537,7 @@ namespace RX_Explorer.View
             MenuFlyoutItem VideoEditButton = new MenuFlyoutItem
             {
                 Text = Globalization.GetString("Operate_Text_Montage"),
+                FontSize = 13,
                 MinWidth = 160,
                 Name = "VideoEditButton",
                 Icon = new FontIcon
@@ -541,6 +551,7 @@ namespace RX_Explorer.View
             MenuFlyoutItem VideoMergeButton = new MenuFlyoutItem
             {
                 Text = Globalization.GetString("Operate_Text_Merge"),
+                FontSize = 13,
                 MinWidth = 160,
                 Name = "VideoMergeButton",
                 Icon = new FontIcon
@@ -554,6 +565,7 @@ namespace RX_Explorer.View
             MenuFlyoutItem TranscodeButton = new MenuFlyoutItem
             {
                 Text = Globalization.GetString("Operate_Text_Transcode"),
+                FontSize = 13,
                 Name = "TranscodeButton",
                 MinWidth = 160,
                 Icon = new FontIcon
@@ -582,12 +594,14 @@ namespace RX_Explorer.View
             {
                 Icon = new SymbolIcon { Symbol = Symbol.Share },
                 Label = Globalization.GetString("Operate_Text_Share"),
+                FontSize = 13,
                 Width = 320
             };
 
             MenuFlyoutItem WiFiShareButton = new MenuFlyoutItem
             {
                 Text = Globalization.GetString("Operate_Text_WIFIShare"),
+                FontSize = 13,
                 MinWidth = 160,
                 Icon = new FontIcon
                 {
@@ -600,6 +614,7 @@ namespace RX_Explorer.View
             MenuFlyoutItem BluetoothShareButton = new MenuFlyoutItem
             {
                 Text = Globalization.GetString("Operate_Text_BluetoothShare"),
+                FontSize = 13,
                 MinWidth = 160,
                 Icon = new FontIcon
                 {
@@ -612,6 +627,7 @@ namespace RX_Explorer.View
             MenuFlyoutItem SystemShareButton = new MenuFlyoutItem
             {
                 Text = Globalization.GetString("Operate_Text_SystemShare"),
+                FontSize = 13,
                 MinWidth = 160,
                 Icon = new FontIcon
                 {
@@ -639,6 +655,7 @@ namespace RX_Explorer.View
             {
                 Icon = new SymbolIcon { Symbol = Symbol.Send },
                 Label = Globalization.GetString("SendTo/Label"),
+                FontSize = 13,
                 Width = 320
             };
 
@@ -659,6 +676,7 @@ namespace RX_Explorer.View
                     Glyph = "\uE7B8"
                 },
                 Label = Globalization.GetString("Operate_Text_Compression"),
+                FontSize = 13,
                 Width = 320
             };
             CompressionButton.Click += Compression_Click;
@@ -672,6 +690,7 @@ namespace RX_Explorer.View
                 Width = 320,
                 Name = "Decompression",
                 Label = Globalization.GetString("Operate_Text_Decompression"),
+                FontSize = 13,
                 Icon = new FontIcon
                 {
                     FontFamily = FontIconFamily,
@@ -737,7 +756,8 @@ namespace RX_Explorer.View
             {
                 Icon = new SymbolIcon { Symbol = Symbol.Tag },
                 Width = 320,
-                Label = Globalization.GetString("Operate_Text_Property")
+                Label = Globalization.GetString("Operate_Text_Property"),
+                FontSize = 13,
             };
             PropertyButton.KeyboardAccelerators.Add(new KeyboardAccelerator
             {
@@ -832,6 +852,7 @@ namespace RX_Explorer.View
             AppBarButton RemoveLabelButton = new AppBarButton
             {
                 Tag = LabelKind.None,
+                FontSize = 13,
                 Icon = new FontIcon
                 {
                     FontFamily = FontIconFamily,
@@ -846,6 +867,7 @@ namespace RX_Explorer.View
                 Name = "PredefineTag1Button",
                 Tag = LabelKind.PredefineLabel1,
                 Foreground = new SolidColorBrush(SettingPage.PredefineLabelForeground1),
+                FontSize = 13,
                 Icon = new FontIcon
                 {
                     FontFamily = FontIconFamily,
@@ -860,6 +882,7 @@ namespace RX_Explorer.View
                 Name = "PredefineTag2Button",
                 Tag = LabelKind.PredefineLabel2,
                 Foreground = new SolidColorBrush(SettingPage.PredefineLabelForeground2),
+                FontSize = 13,
                 Icon = new FontIcon
                 {
                     FontFamily = FontIconFamily,
@@ -874,6 +897,7 @@ namespace RX_Explorer.View
                 Name = "PredefineTag3Button",
                 Tag = LabelKind.PredefineLabel3,
                 Foreground = new SolidColorBrush(SettingPage.PredefineLabelForeground3),
+                FontSize = 13,
                 Icon = new FontIcon
                 {
                     FontFamily = FontIconFamily,
@@ -888,6 +912,7 @@ namespace RX_Explorer.View
                 Name = "PredefineTag4Button",
                 Tag = LabelKind.PredefineLabel4,
                 Foreground = new SolidColorBrush(SettingPage.PredefineLabelForeground4),
+                FontSize = 13,
                 Icon = new FontIcon
                 {
                     FontFamily = FontIconFamily,
@@ -941,6 +966,7 @@ namespace RX_Explorer.View
             {
                 Icon = new SymbolIcon { Symbol = Symbol.OpenFile },
                 Label = Globalization.GetString("Operate_Text_Open"),
+                FontSize = 13,
                 Width = 320
             };
             OpenButton.KeyboardAccelerators.Add(new KeyboardAccelerator
@@ -957,6 +983,7 @@ namespace RX_Explorer.View
             AppBarButton OpenFolderInNewTabButton = new AppBarButton
             {
                 Label = Globalization.GetString("Operate_Text_NewTab"),
+                FontSize = 13,
                 Width = 320,
                 Icon = new FontIcon
                 {
@@ -980,6 +1007,7 @@ namespace RX_Explorer.View
             {
                 Name = "OpenFolderInNewWindowButton",
                 Label = Globalization.GetString("Operate_Text_NewWindow"),
+                FontSize = 13,
                 Width = 320,
                 Icon = new FontIcon
                 {
@@ -1002,6 +1030,7 @@ namespace RX_Explorer.View
             AppBarButton OpenFolderInVerticalSplitViewButton = new AppBarButton
             {
                 Label = Globalization.GetString("Operate_Text_SplitView"),
+                FontSize = 13,
                 Width = 320,
                 Name = "OpenFolderInVerticalSplitView",
                 Visibility = Visibility.Collapsed,
@@ -1029,6 +1058,7 @@ namespace RX_Explorer.View
             {
                 Icon = new SymbolIcon { Symbol = Symbol.Send },
                 Label = Globalization.GetString("SendTo/Label"),
+                FontSize = 13,
                 Width = 320
             };
 
@@ -1044,6 +1074,7 @@ namespace RX_Explorer.View
             AppBarButton CompressFolderButton = new AppBarButton
             {
                 Label = Globalization.GetString("Operate_Text_Compression"),
+                FontSize = 13,
                 Width = 320,
                 Icon = new FontIcon
                 {
@@ -1061,6 +1092,7 @@ namespace RX_Explorer.View
             {
                 Name = "SetAsQuickAccessButton",
                 Label = Globalization.GetString("Operate_Text_SetAsQuickAccess"),
+                FontSize = 13,
                 Width = 320,
                 Icon = new FontIcon
                 {
@@ -1078,7 +1110,8 @@ namespace RX_Explorer.View
             {
                 Icon = new SymbolIcon { Symbol = Symbol.Tag },
                 Width = 320,
-                Label = Globalization.GetString("Operate_Text_Property")
+                Label = Globalization.GetString("Operate_Text_Property"),
+                FontSize = 13,
             };
             PropertyButton.KeyboardAccelerators.Add(new KeyboardAccelerator
             {
@@ -1173,6 +1206,7 @@ namespace RX_Explorer.View
             AppBarButton RemoveLabelButton = new AppBarButton
             {
                 Tag = "Transparent",
+                FontSize = 13,
                 Icon = new FontIcon
                 {
                     FontFamily = FontIconFamily,
@@ -1187,6 +1221,7 @@ namespace RX_Explorer.View
                 Name = "PredefineTag1Button",
                 Tag = LabelKind.PredefineLabel1,
                 Foreground = new SolidColorBrush(SettingPage.PredefineLabelForeground1),
+                FontSize = 13,
                 Icon = new FontIcon
                 {
                     FontFamily = FontIconFamily,
@@ -1201,6 +1236,7 @@ namespace RX_Explorer.View
                 Name = "PredefineTag2Button",
                 Tag = LabelKind.PredefineLabel2,
                 Foreground = new SolidColorBrush(SettingPage.PredefineLabelForeground2),
+                FontSize = 13,
                 Icon = new FontIcon
                 {
                     FontFamily = FontIconFamily,
@@ -1215,6 +1251,7 @@ namespace RX_Explorer.View
                 Name = "PredefineTag3Button",
                 Tag = LabelKind.PredefineLabel3,
                 Foreground = new SolidColorBrush(SettingPage.PredefineLabelForeground3),
+                FontSize = 13,
                 Icon = new FontIcon
                 {
                     FontFamily = FontIconFamily,
@@ -1229,6 +1266,7 @@ namespace RX_Explorer.View
                 Name = "PredefineTag4Button",
                 Tag = LabelKind.PredefineLabel4,
                 Foreground = new SolidColorBrush(SettingPage.PredefineLabelForeground4),
+                FontSize = 13,
                 Icon = new FontIcon
                 {
                     FontFamily = FontIconFamily,
@@ -1282,6 +1320,7 @@ namespace RX_Explorer.View
             {
                 Icon = new SymbolIcon { Symbol = Symbol.OpenFile },
                 Label = Globalization.GetString("Operate_Text_Open"),
+                FontSize = 13,
                 Width = 320
             };
             OpenButton.KeyboardAccelerators.Add(new KeyboardAccelerator
@@ -1303,6 +1342,7 @@ namespace RX_Explorer.View
                     Glyph = "\uE7B8"
                 },
                 Label = Globalization.GetString("Operate_Text_Compression"),
+                FontSize = 13,
                 Width = 320
             };
             CompressionButton.Click += Compression_Click;
@@ -1314,6 +1354,7 @@ namespace RX_Explorer.View
             AppBarButton OpenLocationButton = new AppBarButton
             {
                 Label = Globalization.GetString("Operate_Text_OpenLocation"),
+                FontSize = 13,
                 Width = 320,
                 Icon = new FontIcon
                 {
@@ -1333,7 +1374,8 @@ namespace RX_Explorer.View
             {
                 Icon = new SymbolIcon { Symbol = Symbol.Tag },
                 Width = 320,
-                Label = Globalization.GetString("Operate_Text_Property")
+                Label = Globalization.GetString("Operate_Text_Property"),
+                FontSize = 13,
             };
             PropertyButton.KeyboardAccelerators.Add(new KeyboardAccelerator
             {
@@ -1431,6 +1473,7 @@ namespace RX_Explorer.View
                 Icon = new FontIcon
                 {
                     FontFamily = FontIconFamily,
+                    FontSize = 13,
                     Glyph = "\uEA92"
                 }
             };
@@ -1442,6 +1485,7 @@ namespace RX_Explorer.View
                 Name = "PredefineTag1Button",
                 Tag = LabelKind.PredefineLabel1,
                 Foreground = new SolidColorBrush(SettingPage.PredefineLabelForeground1),
+                FontSize = 13,
                 Icon = new FontIcon
                 {
                     FontFamily = FontIconFamily,
@@ -1456,6 +1500,7 @@ namespace RX_Explorer.View
                 Name = "PredefineTag2Button",
                 Tag = LabelKind.PredefineLabel2,
                 Foreground = new SolidColorBrush(SettingPage.PredefineLabelForeground2),
+                FontSize = 13,
                 Icon = new FontIcon
                 {
                     FontFamily = FontIconFamily,
@@ -1470,6 +1515,7 @@ namespace RX_Explorer.View
                 Name = "PredefineTag3Button",
                 Tag = LabelKind.PredefineLabel3,
                 Foreground = new SolidColorBrush(SettingPage.PredefineLabelForeground3),
+                FontSize = 13,
                 Icon = new FontIcon
                 {
                     FontFamily = FontIconFamily,
@@ -1484,6 +1530,7 @@ namespace RX_Explorer.View
                 Name = "PredefineTag4Button",
                 Tag = LabelKind.PredefineLabel4,
                 Foreground = new SolidColorBrush(SettingPage.PredefineLabelForeground4),
+                FontSize = 13,
                 Icon = new FontIcon
                 {
                     FontFamily = FontIconFamily,
@@ -1537,6 +1584,7 @@ namespace RX_Explorer.View
             {
                 Icon = new SymbolIcon { Symbol = Symbol.OpenFile },
                 Label = Globalization.GetString("Operate_Text_Open"),
+                FontSize = 13,
                 Width = 320
             };
             OpenButton.KeyboardAccelerators.Add(new KeyboardAccelerator
@@ -1553,6 +1601,7 @@ namespace RX_Explorer.View
             AppBarButton MixedCompressionButton = new AppBarButton
             {
                 Label = Globalization.GetString("Operate_Text_Compression"),
+                FontSize = 13,
                 Width = 320,
                 Icon = new FontIcon
                 {
@@ -1571,6 +1620,7 @@ namespace RX_Explorer.View
                 Width = 320,
                 Name = "MixedDecompression",
                 Label = Globalization.GetString("Operate_Text_Decompression"),
+                FontSize = 13,
                 Icon = new FontIcon
                 {
                     FontFamily = FontIconFamily,
@@ -1637,7 +1687,8 @@ namespace RX_Explorer.View
             {
                 Icon = new SymbolIcon { Symbol = Symbol.Tag },
                 Width = 320,
-                Label = Globalization.GetString("Operate_Text_Property")
+                Label = Globalization.GetString("Operate_Text_Property"),
+                FontSize = 13,
             };
             PropertyButton.KeyboardAccelerators.Add(new KeyboardAccelerator
             {
@@ -1670,7 +1721,8 @@ namespace RX_Explorer.View
             {
                 IsEnabled = false,
                 Name = "PasteButton",
-                Icon = new SymbolIcon { Symbol = Symbol.Paste }
+                Icon = new SymbolIcon { Symbol = Symbol.Paste },
+                FontSize = 13,
             };
             ToolTipService.SetToolTip(PasteButton, Globalization.GetString("Operate_Text_Paste"));
             PasteButton.Click += Paste_Click;
@@ -1683,7 +1735,8 @@ namespace RX_Explorer.View
             {
                 IsEnabled = false,
                 Name = "UndoButton",
-                Icon = new SymbolIcon { Symbol = Symbol.Undo }
+                Icon = new SymbolIcon { Symbol = Symbol.Undo },
+                FontSize = 13,
             };
             ToolTipService.SetToolTip(UndoButton, Globalization.GetString("Operate_Text_Undo"));
             UndoButton.Click += Undo_Click;
@@ -1699,7 +1752,8 @@ namespace RX_Explorer.View
                 {
                     FontFamily = FontIconFamily,
                     Glyph = "\uE762"
-                }
+                },
+                FontSize = 13,
             };
             ToolTipService.SetToolTip(MultiSelectionButton, Globalization.GetString("Operate_Text_MultiSelect"));
             MultiSelectionButton.Click += MultiSelect_Click;
@@ -1711,6 +1765,7 @@ namespace RX_Explorer.View
             AppBarButton CreateNewButton = new AppBarButton
             {
                 Label = Globalization.GetString("Operate_Text_Create"),
+                FontSize = 13,
                 Icon = new SymbolIcon { Symbol = Symbol.Add },
                 Width = 320
             };
@@ -1728,6 +1783,7 @@ namespace RX_Explorer.View
             AppBarButton SortButton = new AppBarButton
             {
                 Label = Globalization.GetString("Operate_Text_Sort"),
+                FontSize = 13,
                 Icon = new SymbolIcon { Symbol = Symbol.Sort },
                 Width = 320
             };
@@ -1805,6 +1861,7 @@ namespace RX_Explorer.View
             AppBarButton GroupButton = new AppBarButton
             {
                 Label = Globalization.GetString("Operate_Text_Grouping"),
+                FontSize = 13,
                 Name = "GroupButton",
                 Icon = new FontIcon
                 {
@@ -1897,6 +1954,7 @@ namespace RX_Explorer.View
             AppBarButton RefreshButton = new AppBarButton
             {
                 Label = Globalization.GetString("Operate_Text_Refresh"),
+                FontSize = 13,
                 Icon = new SymbolIcon { Symbol = Symbol.Refresh },
                 Width = 320
             };
@@ -1911,6 +1969,7 @@ namespace RX_Explorer.View
             AppBarButton OpenInTerminalButton = new AppBarButton
             {
                 Label = Globalization.GetString("Operate_Text_OpenInTerminal"),
+                FontSize = 13,
                 Icon = new FontIcon
                 {
                     FontFamily = FontIconFamily,
@@ -1934,6 +1993,7 @@ namespace RX_Explorer.View
             AppBarButton UseSystemFileManagerButton = new AppBarButton
             {
                 Label = Globalization.GetString("Operate_Text_OpenInWinExplorer"),
+                FontSize = 13,
                 Icon = new FontIcon
                 {
                     FontFamily = FontIconFamily,
@@ -1957,6 +2017,7 @@ namespace RX_Explorer.View
             AppBarButton ExpandToCurrentFolderButton = new AppBarButton
             {
                 Label = Globalization.GetString("Operate_Text_RevealCurrentFolder"),
+                FontSize = 13,
                 Name = "ExpandToCurrentFolderButton",
                 Icon = new FontIcon
                 {
@@ -1978,7 +2039,8 @@ namespace RX_Explorer.View
             {
                 Icon = new SymbolIcon { Symbol = Symbol.Tag },
                 Width = 320,
-                Label = Globalization.GetString("Operate_Text_Property")
+                Label = Globalization.GetString("Operate_Text_Property"),
+                FontSize = 13,
             };
             PropertyButton.KeyboardAccelerators.Add(new KeyboardAccelerator
             {
@@ -2009,6 +2071,7 @@ namespace RX_Explorer.View
             AppBarButton SortButton = new AppBarButton
             {
                 Label = Globalization.GetString("Operate_Text_Sort"),
+                FontSize = 13,
                 Icon = new SymbolIcon { Symbol = Symbol.Sort },
                 Width = 250
             };
@@ -2086,6 +2149,7 @@ namespace RX_Explorer.View
             AppBarButton GroupButton = new AppBarButton
             {
                 Label = Globalization.GetString("Operate_Text_Grouping"),
+                FontSize = 13,
                 Name = "GroupButton",
                 Icon = new FontIcon
                 {
@@ -2178,6 +2242,7 @@ namespace RX_Explorer.View
             AppBarButton RefreshButton = new AppBarButton
             {
                 Label = Globalization.GetString("Operate_Text_Refresh"),
+                FontSize = 13,
                 Icon = new SymbolIcon { Symbol = Symbol.Refresh },
                 Width = 250
             };

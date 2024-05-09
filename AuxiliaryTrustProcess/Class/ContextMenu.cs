@@ -312,6 +312,11 @@ namespace AuxiliaryTrustProcess.Class
                 }
             }
 
+            if (MenuItems.Count > 0 && MenuItems[MenuItems.Count - 1].MenuType == MenuItemType.MFT_SEPARATOR)
+            {
+                MenuItems.RemoveAt(MenuItems.Count - 1);
+            }
+
             return MenuItems.ToArray();
         }
 

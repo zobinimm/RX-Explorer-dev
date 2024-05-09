@@ -36,7 +36,7 @@
                 <StackPanel Orientation="Horizontal"
                             Padding="12">
                     <StackPanel>
-                        <TextBlock FontSize="16"
+                        <TextBlock FontSize="14"
                                    VerticalAlignment="Center"
                                    TextAlignment="Center"
                                    Text="{x:Bind Cls:Globalization.GetString('Progress_Tip_Loading')}" />
@@ -57,7 +57,7 @@
                 </Grid.RowDefinitions>
                 <RelativePanel>
                     <TextBlock Text="任务列表"
-                               FontSize="16"
+                               FontSize="14"
                                x:Uid="TaskListPanelTitle"
                                RelativePanel.AlignVerticalCenterWithPanel="True"
                                RelativePanel.AlignLeftWithPanel="True" />
