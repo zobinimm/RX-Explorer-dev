@@ -647,7 +647,7 @@
                 <muxc:TreeView.ItemTemplate>
                     <DataTemplate x:DataType="muxc:TreeViewNode">
                         <RelativePanel Padding="0,5">
-                            <Image Height="25"
+                            <Image Height="20"
                                    Width="25"
                                    Stretch="Uniform"
                                    Margin="0,2,0,0"
@@ -657,7 +657,8 @@
                                    RelativePanel.AlignVerticalCenterWithPanel="True"
                                    RelativePanel.AlignLeftWithPanel="True" />
                             <TextBlock Text="{x:Bind ((Cls:TreeViewNodeContent)Content).DisplayName,Mode=OneWay}"
-                                       Margin="5,0,0,0"
+                                       Margin="3,0,0,0"
+                                       FontSize="13"
                                        TextWrapping="NoWrap"
                                        TextTrimming="CharacterEllipsis"
                                        RelativePanel.AlignRightWithPanel="True"
